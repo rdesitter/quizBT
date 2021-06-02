@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Joue avec la Brasserie du Théâtre.">
+        <meta name="author" content="Raphael Desitter">
+        <title>Quiz de la Brasserie du Théâtre</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="loading" id="loading">
+            <div class="loading__content">
+                <img src="img/BT.svg" alt="BT" class="loading__content__BT">
+                <img src="img/quiz.svg" alt="BT" class="loading__content__quiz">
+                <div class="loading__content__progress">
+                    <span data-progress="100" style="width:0;"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="home" id="home">
+                <embed class="home__logo" src="img/quiz2.svg" alt="Quiz de la brasserie"></embed>
+                <h1 class="home__intro">Saurez vous trouver qui est déjà venu manger à la brasserie Du theatre ?</h1>
+                <div class="home__button" id="btnStart">Commencer le quiz</div>
+            </div>
+            <div class="quiz" id="quiz">
+                <div class="quiz__question" id="question">
+                    <embed class="quiz__logo" src="img/quiz2.svg" alt="Quiz de la brasserie"></embed>
+                    <h2 class="quiz__question__title">Question <span id="questionNumber"></span>/10</h2>
+                    <p class="quiz__question__text">  Qui a déjà mangé à la brasserie du theatre ?</p>
+                    <div class="quiz__question__items" id="quiz__question__items"></div>
+                </div>
+                <div class="quiz__answer quiz__answer-close" id="answer">
+                    <div class="quiz__answer__container">
+                        <h2 class="quiz__answer__title" id="quiz__answer__title"></h2>
+                        <img class="quiz__answer__img" id="img" src="" alt="La réponse en image" >
+                        <div class="quiz__answer__next" id="next">Question suivante</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="footer__link">Aller sur <a href="http://www.brasseriedutheatre.fr">Brasserie du Théâtre.fr</a> </p>
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html> 

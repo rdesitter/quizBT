@@ -1,0 +1,58 @@
+{
+    "questions" : [
+        {
+            "name" : "Laurent Voulzy",
+            "src" : "./img/quiz/001.jpg",
+            "items" : [
+                {
+                    "label" : "Cyril Hanouna",
+                    "value" : "item0",
+                    "answer" : "false"
+                },
+                {
+                    "label" : "Manu Katché",
+                    "value" : "item1",
+                    "answer" : "false"
+                },
+                {
+                    "label" : "Laurent Voulzy",
+                    "value" : "item2",
+                    "answer" : "true"
+                },
+                {
+                    "label" : "Antoine Griezman",
+                    "value" : "item3",
+                    "answer" : "false"
+                }
+
+            ]
+        },
+        {
+            "name" : "Serge Lama",
+            "src" : "./img/quiz/002.jpg",
+            "items" : [
+                {
+                    "label" : "Cyril Hanouna",
+                    "value" : "item0",
+                    "answer" : "false"
+                },
+                {
+                    "label" : "Serge Lama",
+                    "value" : "item1",
+                    "answer" : "true"
+                },
+                {
+                    "label" : "Nikola Anelka",
+                    "value" : "item2",
+                    "answer" : "false"
+                },
+                {
+                    "label" : "Antoine Griezman",
+                    "value" : "item3",
+                    "answer" : "false"
+                }
+
+            ]
+        }
+    ]
+}
