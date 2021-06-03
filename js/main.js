@@ -34,13 +34,11 @@ class Question {
                         let answerImg = document.getElementById('img');
                         answerImg.setAttribute("src", src);
                         answerImg.addEventListener('load', (event) => {
-                            console.log('Logo has been loaded!');
                             document.getElementById('quiz__answer__title').innerHTML = 'Félicitations c\'était bien ' + item;
                             document.getElementById('quiz__answer__title').classList.remove('quiz__answer__title-error');
                             document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');
-                            score++;
                         });
-                        
+                        score++;
                         //console.log('MAJ score = '+score);
                     } else {
                         let answerImg = document.getElementById('img');
@@ -49,8 +47,7 @@ class Question {
                             document.getElementById('quiz__answer__title').innerHTML = 'Désolé la bonne réponse était ' + reponse;
                             document.getElementById('quiz__answer__title').classList.add('quiz__answer__title-error');
                             document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');  
-                        });
-                                             
+                        });             
                         //console.log('score = '+score);
                     }
                     });
@@ -62,7 +59,7 @@ class Question {
 
 let questions = [
     // new Question(['', '', '',''], './img/quiz/006.jpg', '')
-    new Question(['Laurent Voulzy', 'Manu Chao', 'James Bakker','Junihno'], './img/quiz/001.jpg', 'Laurent Voulzy'),
+    new Question(['Laurent Voulzy', 'Manu Chao', 'James Blunt','Antoine'], './img/quiz/001.jpg', 'Laurent Voulzy'),
     new Question(['Arthur', 'Julien Absalon', 'Serge Lama','Mouloud Achour'], './img/quiz/002.jpg', 'Serge Lama'),
     new Question(['Les Nuls', 'Les Inconnus', 'Les Robins des Bois','Les Schtroumpfs'], './img/quiz/003.jpg', 'Les Inconnus'),
     new Question(['Roberto Alagna', 'Abd al Malik', 'Amir','Renaud'], './img/quiz/004.jpg', 'Renaud'),
@@ -120,7 +117,7 @@ function randomNumber(){
 }
 
 function getRandomQuestion(){
-    
+    //console.log(score);
     let randomNum = randomNumber(); //On prend un entier au hasard entre 0 et questionsNumber - 1
     let check = usedNumbers.includes(randomNum); //on vérifie si randomNUm est déjà utilisé
     //console.log(check);
@@ -183,6 +180,7 @@ hideLoader()
 // démarrer la partie
 let btnStart = document.getElementById('btnStart');
 btnStart.addEventListener('click', function(){
+    score = 0;
     document.getElementById('home').style.display = "none";
     document.getElementById('quiz').style.display = "block";
 });
