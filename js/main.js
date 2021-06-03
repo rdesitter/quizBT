@@ -31,17 +31,26 @@ class Question {
                     var item = event.target.value;
                     //si on choisi le bon bouton
                     if(item == reponse){
-                        document.getElementById('img').setAttribute("src", src);
-                        document.getElementById('quiz__answer__title').innerHTML = 'Félicitations c\'était bien ' + item;
-                        document.getElementById('quiz__answer__title').classList.remove('quiz__answer__title-error');
-                        document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');
-                        score++;
+                        let answerImg = document.getElementById('img');
+                        answerImg.setAttribute("src", src);
+                        answerImg.addEventListener('load', (event) => {
+                            console.log('Logo has been loaded!');
+                            document.getElementById('quiz__answer__title').innerHTML = 'Félicitations c\'était bien ' + item;
+                            document.getElementById('quiz__answer__title').classList.remove('quiz__answer__title-error');
+                            document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');
+                            score++;
+                        });
+                        
                         //console.log('MAJ score = '+score);
                     } else {
-                        document.getElementById('img').setAttribute("src", src);
-                        document.getElementById('quiz__answer__title').innerHTML = 'Désolé la bonne réponse était ' + reponse;
-                        document.getElementById('quiz__answer__title').classList.add('quiz__answer__title-error');
-                        document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');                       
+                        let answerImg = document.getElementById('img');
+                        answerImg.setAttribute("src", src);
+                        answerImg.addEventListener('load', (event) => {
+                            document.getElementById('quiz__answer__title').innerHTML = 'Désolé la bonne réponse était ' + reponse;
+                            document.getElementById('quiz__answer__title').classList.add('quiz__answer__title-error');
+                            document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');  
+                        });
+                                             
                         //console.log('score = '+score);
                     }
                     });
