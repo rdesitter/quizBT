@@ -11,7 +11,7 @@ class Question {
             for(let i=0; i<4; i++){
                 //On vérifie quel item correspond à la bonne réponse
                 if (this.items[i] == this.reponse) {
-                    let answerIs = 'item' + i;
+                    //let answerIs = 'item' + i;
                     //console.log('bonne réponse = ' + answerIs);
                     return this.items[i];
                 }
@@ -88,7 +88,7 @@ let questions = [
     new Question(['Kev Adams', 'Cyril Hanouna', 'Gad Elmaleh','Kad Merad'], './img/quiz/023.jpg', 'Gad Elmaleh'),
     new Question(['Eddy Mitchell', 'Jacques Dutronc', 'Michel Sardou','Dick Rivers'], './img/quiz/024.jpg', 'Eddy Mitchell'),
     new Question(['Patrick Fiori', 'Patrick Bruel', 'Marc Lavoine','Julien Clerc'], './img/quiz/025.jpg', 'Patrick Bruel'),
-    new Question(['Pagny', 'Zazie', 'Goldman','Bénabar'], './img/quiz/026.jpg', 'Jean-Jacques Goldman'),
+    new Question(['Pagny', 'Zazie', 'JJ Goldman','Bénabar'], './img/quiz/026.jpg', 'JJ Goldman'),
     new Question(['Serge Gainsbourg', 'Michel Sardou', 'Charles Aznavour','Johnny Hallyday'], './img/quiz/027.jpg', 'Johnny Hallyday'),
     new Question(['Josiane Balasko', 'Richard Berry', 'Dominique Lavanant','Victoria Abril'], './img/quiz/028.jpg', 'Josiane Balasko'),
     new Question(['Lindsay Lohan', 'Paris Hilton', 'Britney Spears','Pamela Anderson'], './img/quiz/029.jpg', 'Paris Hilton'),
@@ -114,6 +114,11 @@ let score = 0;
 // -------------------------- //
 const nextButton = document.getElementById('next');
 nextButton.addEventListener('click', function(){
+    if(itemNumber == 9){
+        nextButton.innerText = 'Voir mon score';
+    } else {
+        nextButton.innerText = 'Question suivante'
+    }
     document.getElementById('answer').classList.replace('quiz__answer-open', 'quiz__answer-close');
     getRandomQuestion(); //On appelle une question
 });
@@ -160,6 +165,7 @@ function finDuQuiz(){
         document.getElementById('question').innerHTML = nouvellePartie;
         itemNumber = 0;
         score = 0;
+        usedNumbers = [];
         getRandomQuestion();
     });
 };
