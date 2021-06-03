@@ -1,3 +1,7 @@
+// -------------------------- //
+// Construction des questions //
+// -------------------------- //
+
 class Question {
     constructor(items,src,reponse){
         this.items = items;
@@ -96,22 +100,28 @@ let questions = [
     new Question(['Samy Naceri', 'Nicolas Duvauchelle', 'Pascal Elbé','Roschdy Zem'], './img/quiz/035.jpg', 'Roschdy Zem'),
     new Question(['José Garcia', 'Richard Anconina', 'Bruno Solo','Gilbert Melki'], './img/quiz/036.jpg', 'José Garcia')
 ];
-
-//Initialisation des variables
+// -------------------------- //
+//Initialisation des variables//
+// -------------------------- //
 let usedNumbers = []; //On prépare le tableau pour les questions utilisées
 let questionsNumber = questions.length;  //On récupère le nombre de questions disponibles
 let itemNumber = 0;
 let score = 0;
 //console.log('score = '+score);
 
-//Bouton question suivante
+// -------------------------- //
+//  Bouton question suivante  //
+// -------------------------- //
 const nextButton = document.getElementById('next');
 nextButton.addEventListener('click', function(){
     document.getElementById('answer').classList.replace('quiz__answer-open', 'quiz__answer-close');
-    getRandomQuestion(); //On change la question
+    getRandomQuestion(); //On appelle une question
 });
 
-
+// -------------------------- //
+//     Appel d'une question   //
+// -------------------------- //
+// Question aléatoire && non déjà posée
 function randomNumber(){
     return Math.floor((Math.random() * questionsNumber));
 }
@@ -139,6 +149,9 @@ function getRandomQuestion(){
     }
 }
 
+// -------------------------- //
+//  Affichage des résultats   //
+// -------------------------- //
 function finDuQuiz(){
     let finDePartie = "<div class=\"score\"><h2 class=\"score__title\">Score final</h2><div class=\"score__final\">"+score+"</div></div><div class=\"score__rejouer\" id=\"rejouer\">Nouvelle partie</div>";
     let nouvellePartie = "<embed class=\"quiz__logo\" src=\"img/quiz2.svg\" alt=\"Quiz de la brasserie\"></embed><h2 class=\"quiz__question__title\">Question <span id=\"questionNumber\"></span>/10</h2><p class=\"quiz__question__text\">Qui a déjà mangé à la brasserie du theatre ?</p><div class=\"quiz__question__items\" id=\"quiz__question__items\"></div>";
@@ -151,9 +164,10 @@ function finDuQuiz(){
     });
 };
 
-getRandomQuestion();
 
-// progress bar
+// -------------------------- //
+//  faux écran de chargement  //
+// -------------------------- //
 var bars = document.querySelectorAll('.loading__content__progress > span');
 
 function hideLoader(){
@@ -175,9 +189,10 @@ function hideLoader(){
 
 }
 
-hideLoader()
 
-// démarrer la partie
+// -------------------------- //
+// bouton démarrer la partie  //
+// -------------------------- //
 let btnStart = document.getElementById('btnStart');
 btnStart.addEventListener('click', function(){
     score = 0;
@@ -185,3 +200,11 @@ btnStart.addEventListener('click', function(){
     document.getElementById('quiz').style.display = "block";
 });
 
+// -------------------------- //
+//     On lance le script     //
+// -------------------------- //
+hideLoader(); //Affichage du faux loader
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    getRandomQuestion(); //Quand le doc est chargé on lance le quiz
+});  
