@@ -1,3 +1,49 @@
+var images = new Array()
+function preload() {
+    for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+    }
+}
+preload(
+    "https://rdesitter.github.io/quizBT/img/quiz/001.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/002.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/003.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/004.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/005.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/006.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/007.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/008.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/009.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/010.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/011.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/012.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/013.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/014.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/015.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/016.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/017.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/018.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/019.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/020.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/021.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/022.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/023.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/024.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/025.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/026.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/027.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/028.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/029.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/030.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/031.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/032.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/033.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/034.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/035.jpg",
+    "https://rdesitter.github.io/quizBT/img/quiz/036.jpg"
+
+)
 class Question {
     constructor(items,src,reponse){
         this.items = items;
