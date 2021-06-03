@@ -8,10 +8,8 @@ class Question {
                 //On vérifie quel item correspond à la bonne réponse
                 if (this.items[i] == this.reponse) {
                     let answerIs = 'item' + i;
-                    console.log('bonne réponse = ' + answerIs);
+                    //console.log('bonne réponse = ' + answerIs);
                     return this.items[i];
-                } else {
-                    console.log('erreur');
                 }
             } 
         };
@@ -38,13 +36,13 @@ class Question {
                         document.getElementById('quiz__answer__title').classList.remove('quiz__answer__title-error');
                         document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');
                         score++;
-                        console.log('MAJ score = '+score);
+                        //console.log('MAJ score = '+score);
                     } else {
                         document.getElementById('img').setAttribute("src", src);
                         document.getElementById('quiz__answer__title').innerHTML = 'Désolé la bonne réponse était ' + reponse;
                         document.getElementById('quiz__answer__title').classList.add('quiz__answer__title-error');
                         document.getElementById('answer').classList.replace('quiz__answer-close', 'quiz__answer-open');                       
-                        console.log('score = '+score);
+                        //console.log('score = '+score);
                     }
                     });
                 });
@@ -98,7 +96,7 @@ let usedNumbers = []; //On prépare le tableau pour les questions utilisées
 let questionsNumber = questions.length;  //On récupère le nombre de questions disponibles
 let itemNumber = 0;
 let score = 0;
-console.log('score = '+score);
+//console.log('score = '+score);
 
 //Bouton question suivante
 const nextButton = document.getElementById('next');
@@ -116,7 +114,7 @@ function getRandomQuestion(){
     
     let randomNum = randomNumber(); //On prend un entier au hasard entre 0 et questionsNumber - 1
     let check = usedNumbers.includes(randomNum); //on vérifie si randomNUm est déjà utilisé
-    console.log(check);
+    //console.log(check);
     let usedLength = usedNumbers.length;
     if(usedLength < questionsNumber && check == false){
         usedNumbers.push(randomNum);
@@ -124,7 +122,7 @@ function getRandomQuestion(){
         questions[randomNum].constructRadios();
         questions[randomNum].displayAnswer(); 
         itemNumber++;
-        console.log(itemNumber)
+        //console.log(itemNumber)
     }else if(usedLength < questionsNumber && check == true){
         getRandomQuestion();
     } else if(usedLength = questionsNumber){
