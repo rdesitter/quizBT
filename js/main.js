@@ -72,7 +72,7 @@ let questions = [
     new Question(['Alain Souchon', 'Charles Aznavour', 'Claude François','Jacques Dutronc'], './img/quiz/007.jpg', 'Alain Souchon'),
     new Question(['Kad Merad', 'Richard Berry', 'Gérard Lanvin','Gérard Darmon'], './img/quiz/008.jpg', 'Gérard Darmon'),
     new Question(['Christian CLavier', 'Monica Bellucci', 'Omar Sy','Jamel Debbouze'], './img/quiz/009.jpg', 'Jamel Debbouze'),
-    new Question(['Vincent Desagnat', 'Michaël Youn', 'Stéphane Rousseau','Arnaud Ducret'], './img/quiz/010.jpg', 'Michaël Youn'),
+    new Question(['Vincent Desagnat', 'Michaël Youn', 'Benjamin Morgaine','Magloire'], './img/quiz/010.jpg', 'Michaël Youn'),
     new Question(['Jean-Yves Lafesse', 'Laurent Baffie', 'Coluche','Pascal Selem'], './img/quiz/011.jpg', 'Jean-Yves Lafesse'),
     new Question(['Yolande Moreau', 'Philippe Duquesne', 'Bruno Lochet','François Morel'], './img/quiz/012.jpg', 'François Morel'),
     new Question(['Loana', 'Steevy Boulay', 'Caroline Diament','Laurent Ruquier'], './img/quiz/013.jpg', 'Steevy Boulay'),
@@ -172,8 +172,26 @@ function getRandomQuestion(){
 //  Affichage des résultats   //
 // -------------------------- //
 function finDuQuiz(){
-    let finDePartie = "<div class=\"score\"><h2 class=\"score__title\">Score final</h2><div class=\"score__final\">"+score+"</div></div><div class=\"score__rejouer\" id=\"rejouer\">Nouvelle partie</div>";
+    let msgFinal = "";
+    let textFinal = "";
+    if(score == 10) {
+        msgFinal = "Félicitations";
+        textFinal = "La Brasserie doit être votre seconde maison !"
+    } else if(score < 10 && score > 6){
+        msgFinal = "Bravo";
+        textFinal = "Vous connaissez bien la Brasserie !"
+    } else if(score == 5 || score == 6) {
+        msgFinal = "Pas mal";
+        textFinal = "Vous êtes sur la bonne voie !"
+    } else {
+        msgFinal = "Pas de chance";
+        textFinal = "Vous ferez mieux la prochaine fois !"
+    }
+
+
+    let finDePartie = "<div class=\"score\"><h2 class=\"score__title\">"+msgFinal+"</h2><p>"+textFinal+"</p><div class=\"score__final\">Votre score : <span class=\"score__final-answer\">"+score+"</span></div></div><div class=\"score__rejouer\" id=\"rejouer\">Nouvelle partie</div>";
     let nouvellePartie = "<embed class=\"quiz__logo\" src=\"img/quiz2.svg\" alt=\"Quiz de la brasserie\"></embed><h2 class=\"quiz__question__title\">Question <span id=\"questionNumber\"></span>/10</h2><p class=\"quiz__question__text\">Qui a déjà mangé à la brasserie du theatre ?</p><div class=\"quiz__question__items\" id=\"quiz__question__items\"></div>";
+    
     document.getElementById('question').innerHTML = finDePartie;
     document.getElementById('rejouer').addEventListener('click', function(){
         document.getElementById('question').innerHTML = nouvellePartie;

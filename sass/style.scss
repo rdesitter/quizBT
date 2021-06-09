@@ -245,7 +245,7 @@ body {
 }
 
 .score {
-
+    padding: 0 15px;;
     &__title{
         font-family: 'Augustea', sans-serif;
         margin-bottom: 30px;
@@ -255,9 +255,14 @@ body {
         padding: 10px ;
         background: #fff;
         width: 250px;
-        font-size: 36px;
+        font-size: 26px;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin: 30px auto;
+
+        &-answer {
+            font-size: 36px;
+            display: block;
+        }
     }
 
     &__rejouer {
