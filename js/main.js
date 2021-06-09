@@ -79,7 +79,7 @@ let questions = [
     new Question(['Smaïn', 'Elie Kakou', 'Patrick Timsit','Roland Giraud'], './img/quiz/014.jpg', 'Smaïn'),
     new Question(['Marc Lavoine', 'Florent Pagny', 'Pascal Obispo','Calogero'], './img/quiz/015.jpg', 'Pascal Obispo'),
     new Question(['Michel Blanc', 'Marie-Anne Chazel', 'Thierry Lhermitte','Christian Clavier'], './img/quiz/016.jpg', 'Thierry Lhermitte'),
-    new Question(['Benoît Poelvoorde', 'Clovis Cornillac', 'Benoît Delépine','François Damiens'], './img/quiz/017.jpg', 'Benoît Poelvoorde'),
+    new Question(['Benoît Poelvoorde', 'Clovis Cornillac', 'Benoît Delépine','Vincent Lindon'], './img/quiz/017.jpg', 'Benoît Poelvoorde'),
     new Question(['Omar et Fred', 'Les Frères Taloche', 'Shirley & Dino','Eric et Ramzy'], './img/quiz/018.jpg', 'Eric et Ramzy'),
     new Question(['Jean-Paul Rouve', 'Maurice Barthélemy', 'Marina Foïs','Pef'], './img/quiz/019.jpg', 'Jean-Paul Rouve'),
     new Question(['Michel Drucker', 'Patrick Sébastien', 'Philippe Bouvard','Jean-Pierre Foucault'], './img/quiz/020.jpg', 'Jean-Pierre Foucault'),
@@ -98,7 +98,21 @@ let questions = [
     new Question(['Le Palmashow', 'La Bande à Fifi', 'Golden Moustache','Studio Bagel'], './img/quiz/033.jpg', 'La Bande à Fifi'),
     new Question(['Kad Merad', 'Maurice Barthélemy', 'Dany Boon','Guy Lecluyse'], './img/quiz/034.jpg', 'Dany Boon'),
     new Question(['Samy Naceri', 'Nicolas Duvauchelle', 'Pascal Elbé','Roschdy Zem'], './img/quiz/035.jpg', 'Roschdy Zem'),
-    new Question(['José Garcia', 'Richard Anconina', 'Bruno Solo','Gilbert Melki'], './img/quiz/036.jpg', 'José Garcia')
+    new Question(['José Garcia', 'Richard Anconina', 'Bruno Solo','Gilbert Melki'], './img/quiz/036.jpg', 'José Garcia'),
+    new Question(['Fanny Ardant', 'Patrick Chesnais', 'Sandrine Kiberlain','Laurent Lafitte'], './img/quiz/037.jpg', 'Patrick Chesnais'),
+    new Question(['Camille Lellouche', 'Fauve Hautot', 'Rayane Bensetti','Keen\'V'], './img/quiz/038.jpg', 'Rayane Bensetti'),
+    new Question(['Jonathan Cohen', 'Gilles Lellouche', 'Camille Combal','Manu Payet'], './img/quiz/039.jpg', 'Manu Payet'),
+    new Question(['François Damiens', 'Audrey Tautou', 'Dominique Pinon','Mélanie Laurent'], './img/quiz/040.jpg', 'François Damiens'),
+    new Question(['Éric Antoine', 'Arturo Brachetti', 'Patrick Sébastien','Jérémy Ferrari'], './img/quiz/041.jpg', 'Arturo Brachetti'),
+    new Question(['Roland Magdane', 'Popeck', 'Michel Leeb','Fabrice Luchini'], './img/quiz/042.jpg', 'Michel Leeb'),
+    new Question(['FX Demaison', 'Jérôme Commandeur', 'Franck Dubosc','Arnaud Ducret'], './img/quiz/043.jpg', 'Arnaud Ducret'),
+    new Question(['Nawell Madani', 'Inès Reg', 'Blanche Gardin','Camille Lellouche'], './img/quiz/044.jpg', 'Nawell Madani'),
+    new Question(['Kim Chapiron', 'Nicolas Duvauchelle', 'Ludivine Sagnier','Aure Atika'], './img/quiz/045.jpg', 'Nicolas Duvauchelle'),
+    new Question(['Stéphane Bern', 'Julien Courbey', 'Lorànt Deutsch','Stomy Bugsy'], './img/quiz/046.jpg', 'Lorànt Deutsch'),
+    new Question(['Lanvin & De Palma', 'Clavier & Reno', 'Palmade & Laroque','Le Bolloc\'h & Solo'], './img/quiz/047.jpg', 'Le Bolloc\'h & Solo'),
+    new Question(['Alexandra Lamy', 'Audrey Lamy', 'Jean Dujardin','Thomas Dutronc'], './img/quiz/048.jpg', 'Alexandra Lamy'),
+    new Question(['Emmanuel Petit', 'Youri Djorkaeff', 'Bixente Lizarazu','Lilian Thuram'], './img/quiz/049.jpg', 'Youri Djorkaeff'),
+    new Question(['Fabien Galthié', 'Guy Novès', 'Daniel Herrero','Serge Blanco'], './img/quiz/050.jpg', 'Daniel Herrero')
 ];
 // -------------------------- //
 //Initialisation des variables//
